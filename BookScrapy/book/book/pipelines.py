@@ -7,7 +7,16 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
+from pathlib import Path
+import os
 
 class BookPipeline:
     def process_item(self, item, spider):
-        return item
+        bookName = item['name']
+        title = item['title']
+        path = Path(os.getcwd() + "/resource/" + bookName + "/" + str(item['id']) + title + ".html")
+        file = open(path, 'w', encoding='utf-8')
+        file.write(item['content'])
+        file.close()
+        print(title + " 下载成功")
+
