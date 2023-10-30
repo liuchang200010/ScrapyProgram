@@ -14,7 +14,7 @@ class BookPipeline:
     def process_item(self, item, spider):
         bookName = item['name']
         title = item['title']
-        path = Path(os.getcwd() + "/resource/" + bookName + "/" + str(item['id']) + title + ".html")
+        path = Path(os.getcwd() + "/resources/" + bookName + "/" + str(item['id']) + title + ".html")
         file = open(path, 'w', encoding='utf-8')
         file.write(item['content'])
         file.close()

@@ -5,6 +5,6 @@
 
 ```python
 url: https://www.qimao5.com
-使用前需要创建文件资源路径: 例如book/resource/bookName书名
+使用前需要创建文件资源路径: 例如book/resources/bookName书名
 ```
 
