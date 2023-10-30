@@ -15,7 +15,7 @@ NEWSPIDER_MODULE = "book.spiders"
 ITEM_PIPELINES = {
    'book.pipelines.BookPipeline': 300,
 }
-
+FILES_STORE = 'resources'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "book (+http://www.yourdomain.com)"
