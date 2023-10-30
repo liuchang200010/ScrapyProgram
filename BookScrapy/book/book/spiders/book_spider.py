@@ -19,5 +19,7 @@ class BookSpider(scrapy.Spider):
         book['name'] = response.meta['name']
         book['id'] = response.meta['id']
         book['title'] = response.xpath('string(//h1[@class="wap_none"])').extract_first()
-        book['content'] = response.xpath('//div[@id="chaptercontent"]').extract_first().replace('\u3000', '')
-        yield book
+        # book['content'] = response.xpath('//div[@id="chaptercontent"]').extract_first().replace('\u3000', '')
+        book['file_urls'] = [response.url]
+        # yield book
+        return book

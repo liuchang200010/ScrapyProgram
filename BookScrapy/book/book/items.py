@@ -11,3 +11,6 @@ class BookItem(Item):
     id = Field()
     title = Field()
     content = Field()
+
+    file_urls = Field()
+    files = Field()
