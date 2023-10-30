@@ -1,6 +1,16 @@
 # ScrapyProgram
 使用Scrapy编写爬虫案例
 
+## 0.常用命令
+
+```shell
+安装虚拟环境 pip3 install virtualenv
+创建虚拟环境 python -m venv venv
+激活环境 venv\Scripts\activate (Windows) source venv/bin/activate (Linux)
+停用 deactivate
+生成requirements.txt pipreqs ./ --encoding utf-8
+```
+
 ## 1.爬取文本数据
 
 ```python
