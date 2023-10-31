@@ -9,6 +9,8 @@
 激活环境 venv\Scripts\activate (Windows) source venv/bin/activate (Linux)
 停用 deactivate
 生成requirements.txt pipreqs ./ --encoding utf-8
+scrapy新建项目 scrapy startproject
+scrapy启动爬虫 scrapy crawl
 ```
 
 ## 1.爬取文本数据
@@ -22,5 +24,8 @@ url: https://www.qimao5.com
 
 ```python
 url:http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000007/vertical
+        
+使用scrapy自带的ImagesPipeline无法下载图片，出现以下提示信息，执行 pip3 install pillow
+ WARNING: Disabled scrapy.pipelines.images.ImagesPipeline: ImagesPipeline requires installing Pillow 4.0.0 or later
 ```
 
