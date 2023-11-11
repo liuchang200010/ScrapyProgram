@@ -11,6 +11,14 @@ BOT_NAME = "video"
 
 SPIDER_MODULES = ["video.spiders"]
 NEWSPIDER_MODULE = "video.spiders"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+DOWNLOADER_MIDDLEWARES = {
+    'video.middlewares.CustomUserAgentMiddleware': 300
+}
+ITEM_PIPELINES = {
+   'video.pipelines.VideoPipeline': 300,
+}
+FILES_STORE = 'resources'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
