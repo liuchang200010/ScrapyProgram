@@ -9,6 +9,7 @@
 激活环境 venv\Scripts\activate (Windows) source venv/bin/activate (Linux)
 停用 deactivate
 生成requirements.txt pipreqs ./ --encoding utf-8
+安装scrapy pip3 install scrapy
 scrapy新建项目 scrapy startproject
 scrapy启动爬虫 scrapy crawl
 ```
