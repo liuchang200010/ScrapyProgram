@@ -30,3 +30,9 @@ url:http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d29660000
  WARNING: Disabled scrapy.pipelines.images.ImagesPipeline: ImagesPipeline requires installing Pillow 4.0.0 or later
 ```
 
+## 3.爬取短视频数据
+
+```python
+yy直播 url:https://api-tinyvideo-web.yy.com/home/tinyvideosv2
+```
+
