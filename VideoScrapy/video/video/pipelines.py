@@ -7,7 +7,14 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
+from os.path import join
+from scrapy.pipelines.files import FilesPipeline
 
-class VideoPipeline:
-    def process_item(self, item, spider):
-        return item
+
+class VideoPipeline(FilesPipeline):
+
+    def file_path(self, request, response=None, info=None, *, item):
+        video_id = item['video_id']
+        return join(str(video_id) + ".mp4")
+
+
