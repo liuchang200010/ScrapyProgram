@@ -1,6 +1,7 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
-from ..items import BookItem
+from BookScrapy.book.book.items import BookItem
+from scrapy import cmdline
 
 class BookSpider(scrapy.Spider):
     name = "books"
@@ -23,3 +24,11 @@ class BookSpider(scrapy.Spider):
         book['file_urls'] = [response.url]
         # yield book
         return book
+
+if __name__ == '__main__':
+    cmdline.execute("scrapy crawl books".split())
+    cmdline.execute(argv=['scrapy', 'crawl', 'books'])
+
+    cmdline.execute("scrapy crawl books --nolog".split())
+    cmdline.execute(argv=['scrapy', 'crawl', 'books', '--nolog'])
+

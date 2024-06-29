@@ -1,6 +1,7 @@
 from scrapy import Spider
 import json
-from ..items import ImageItem
+from ImageScrapy.image.image.items import ImageItem
+from scrapy import cmdline
 
 class ImageSpider(Spider):
     name = 'images'
@@ -11,5 +12,10 @@ class ImageSpider(Spider):
         image = ImageItem()
         image["image_urls"] = [obj['wp'] for obj in json_data]
         yield image
+
+if __name__ == '__main__':
+    # cmdline.execute('scrapy crawl images'.split())
+    cmdline.execute('scrapy crawl images --nolog'.split())
+
 
 

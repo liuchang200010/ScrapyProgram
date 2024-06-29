@@ -1,6 +1,7 @@
 from scrapy import Spider
 import json
-from ..items import VideoItem
+from VideoScrapy.video.video.items import VideoItem
+from scrapy import cmdline
 
 class ImageSpider(Spider):
     name = 'videos-yy'
@@ -14,3 +15,5 @@ class ImageSpider(Spider):
             video['video_id'] = v['resid']
             yield video
 
+if __name__ == '__main__':
+    cmdline.execute('scrapy crawl videos-yy --nolog'.split())
